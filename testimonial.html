@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <title>Kerry's Catering Services Website Design</title>
     <style>
+       
         .header{
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +29,91 @@
     .header>nav>ul>li>a:hover{
         border-bottom:1px solid rgb(237, 110, 36);
     }
-    #footer{
+    
+    /*---testimonial---*/
+
+#testimonial{
+  width: 100%;
+  padding: 70px 0;
+}
+.title-text{
+  text-align: center;
+  padding-bottom: 70px;
+}
+.title-text p{
+  margin: auto;
+  font-size: 20px;
+  color: #dc7053e0;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+}
+.title-text p::after{
+    content:'';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#dc7053e0,#fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+.title-text h1{
+  font-size: 40px;
+}
+.testimonial-row{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.testimonial-col{
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 3px #dc7053e0;
+  cursor: pointer;
+  transition: transform .5s;
+}
+.testimonial-col p{
+  font-size: 14px;
+}
+.user{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.user img{
+  width: 40px;
+  margin-right: 20px;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+.user-info .fa{
+  margin-left: 10px;
+  color: #27c0ff;
+  font-size: 20px;
+}
+.user-info small{
+  color: #dc7053e0;
+}
+.testimonial-col:hover{
+  transform: translateY(-7px);
+}
+@media screen and (max-width: 770px){
+  .testimonial-col{
+    flex-basis: 100%;
+  }
+}
+#footer{
   padding: 100px 0 20px;
   background: #efefef;
   position: relative;
@@ -99,116 +184,7 @@
     top: 25%;
   }
 }
-    
-    /*--service--*/
 
-#service{
-  width: 100%;
-  padding: 70px 0;
-  background: #efefef;
-}
-.title-text{
-  text-align: center;
-  padding-bottom: 70px;
-}
-.title-text p{
-  margin: auto;
-  font-size: 20px;
-  color: #dc7053e0;
-  font-weight: bold;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-
-}
-.title-text p::after{
-    content:'';
-    width: 50px;
-    height: 35px;
-    background: linear-gradient(#dc7053e0,#fff);
-    position: absolute;
-    top: -20px;
-    left: 0;
-    z-index: -1;
-    transform: rotate(10deg);
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
-.title-text h1{
-  font-size: 40px;
-}
-.service-box{
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: auto;
-}
-.single-service{
-  flex-basis: 48%;
-  text-align: center;
-  border-radius: 7px;
-  margin-bottom: 20px;
-  color: #fff;
-  position: relative;
-}
-.single-service img{
-  width: 100%;
-  border-radius: 7px;
-}
-.overlay{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  border-radius: 7px;
-  cursor: pointer;
-  background: linear-gradient(rgba(0,0,0,0.5),#dc7053e0);
-  opacity: 0;
-  transition: 1s;
-}
-.single-service:hover .overlay{
-  opacity: 1;
-}
-.service-desc{
-  width: 80%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: 1s;
-} 
-hr{
-  background: #fff;
-  height: 2px;
-  border: 0;
-  margin: 15px auto;
-  width: 60%;
-}
-.service-desc p{
-  font-size: 14px;
-}
-.single-service:hover .service-desc{
-bottom: 40%;
-opacity: 1;
-}
-
-@media screen and (max-width: 770px){
-  .single-service{
-    flex-basis: 100%;
-    margin-bottom: 30px;
-  }
-  .service-desc p{
-    font-size: 12px;
-}
-hr{
-  margin: 5px auto;
-}
-.single-service:hover .service-desc{
-  bottom: 25% !important;
-  }
-}
     </style>
 </head>
 
@@ -224,53 +200,46 @@ hr{
             </ul>
         </nav>
     </div>
-    <!--Service-->
+    
+    <!-- Testimonial -->
 
-    <section id="service">
+    <section id="testimonial">
         <div class="title-text">
-          <p> SERVICES</p>
-          <h1> We Provide The Best</h1>
+          <p> TESTIMONIAL</p>
+          <h1> What Our Customers Say</h1>
         </div>
-        <div class="service-box">
-          <div class="single-service">
-            <img src="images/pexels-vidal-balielo-jr-4007057.jpg">
-            <div class="overlay"></div>
-            <div class="service-desc">
-              <h3> Corporate Catering </h3>
-              <hr>
-              <p> Catering services specifically tailored for corporate clients and events, such as business meetings, conferences, and product launches.</p>
+        <div class="testimonial-row">
+          <div class="testimonial-col">
+            <div class="user">
+              <img src="images/customer 3.jpg">
+              <div class="user-info">
+                <h4>FELIX OTIS <i class="fa fa-twitter"></i></h4>
+                <small>@otisfelo</small>
+              </div>
             </div>
+            <p> "I've used Food Palace catering service for several corporate events and they have exceeded my expectations. The team is always professional, courteous, and they go out of their way to make sure everything is perfect.The food is always a hit - they offer a wide range of options that appeal to all tastes. I highly recommend Food Palace catering service to anyone in need of a top-notch caterer."</p>
           </div>
-          <div class="single-service">
-            <img src="images/pexels-marianna-3843224.jpg">
-            <div class="overlay"></div>
-            <div class="service-desc">
-              <h3> Social Event Catering </h3>
-              <hr>
-              <p> Catering services for social gatherings and events, such as weddings, birthday parties, and family reunions.</p>
+          <div class="testimonial-col">
+            <div class="user">
+              <img src="images/customer 2.jpg">
+              <div class="user-info">
+                <h4>LISA ANISA <i class="fa fa-twitter"></i></h4>
+                <small>@lisanisa</small>
+              </div>
             </div>
+            <p> "Top-notch catering - we'll definitely be using Food Palace catering service again. Couldn't be happier with the level of service we received. 10/10."</p>
           </div>
-          <div class="single-service">
-            <img src="images/pexels-amina-filkins-5561448.jpg">
-            <div class="overlay"></div>
-            <div class="service-desc">
-              <h3> Cooking lessons </h3>
-              <hr>
-              <p> We have classes for both adults and children where we learn how to cook different foods for different cultures at a very affordable price</p>
+          <div class="testimonial-col">
+            <div class="user">
+              <img src="images/pexels-mwabonje-1820559.jpg">
+              <div class="user-info">
+                <h4> SHIRLEY AUDREY <i class="fa fa-instagram"></i></h4>
+                <small>@shirdrey</small>
+              </div>
             </div>
-          </div>
-          <div class="single-service">
-            <img src="images/pexels-rajesh-tp-1624487 - Copy.jpg">
-            <div class="overlay"></div>
-            <div class="service-desc">
-              <h3>  Full-service catering </h3>
-              <hr>
-              <p> Offer full-service catering services, where the catering team provides set up, service, and clean up at the event location.</p>
-            </div>
-          </div>
+            <p>"I hosted a dinner party and used Food Palace catering service for the first time. I have to say, I was blown away by how easy they made everything. From helping me choose the right dishes to delivering everything on time. I would definitely use Food Palace catering service again in the future." </p>
+          </div>               
         </div>
-          
-            
   
       </section>
 
@@ -309,8 +278,6 @@ hr{
   
   
   </section>
-  
-
-       
+   
 </body>
 </html>

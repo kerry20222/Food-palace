@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Kerry's Catering Services Website Design</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,7 +11,232 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
-  <body>
+    <title>Kerry's Catering Services Website Design</title>
+    <style>
+        .header{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 60px;
+       }
+  
+    .header>nav>ul>li{
+        display: inline;
+    
+    }
+    .header>nav>ul>li>a{
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        
+        padding: 10px 20px;
+    
+    }
+    .header>nav>ul>li>a:hover{
+        border-bottom:1px solid rgb(237, 110, 36);
+    }
+   #banner {
+  background: linear-gradient(rgba(15, 117, 64, 0.708), #b35136e0),
+    url(./images/pexels-naim-benjelloun-2291367.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.logo {
+  width: 100px;
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+
+.banner-text {
+  text-align: center;
+  color: azure;
+  padding-top: 180px;
+}
+.banner-text h1 {
+  font-size: 130px;
+  font-family: "Kaushan Script", cursive;
+}
+.banner-text p {
+  font-size: 20px;
+  font-style: italic;
+}
+.banner-btn {
+  margin: 70px auto 0;
+}
+.banner-btn a {
+  width: 150px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: azure;
+  border: 0.5px solid azure;
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s;
+}
+.banner-btn a span {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: azure;
+  z-index: -1;
+  transition: 0.5s;
+}
+.banner-btn a:hover span {
+  width: 100%;
+}
+.banner-btn a:hover {
+  color: black;
+}
+#sideNav {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #dc7053e0;
+  z-index: 2;
+  transition: 0.5s;
+}
+nav ul li {
+  list-style: none;
+  margin: 50px 20px;
+}
+nav ul li a{
+  text-decoration: wavy;
+  color: azure;
+}
+#menuBtn {
+  width: 50px;
+  height: 50px;
+  background: #dc7053e0;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+#menuBtn img {
+  width: 20px;
+  margin-top: 15px;
+}
+
+/* #menu {
+    background-color: white;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+   z-index: 5;
+   
+   display: none;
+
+}
+ */
+    @media screen and (max-width: 770px){ 
+        .banner-text h1{
+            font-size: 44px;
+    }
+        .banner-btn a {
+         display: block;
+         margin: 20px auto;
+  }
+}
+#footer{
+  padding: 100px 0 20px;
+  background: #efefef;
+  position: relative;
+}
+.footer-row{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-left,.footer-right{
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.footer-right{
+  text-align: right;
+}
+.footer-row h1{
+  margin: 10px 0;
+}
+.footer-row p{
+  line-height: 35px;
+}
+.footer-left .fa,.footer-right .fa{
+  font-size: 20px;
+  color: #dc7053e0;
+  margin: 10px;
+}
+.footer-img{
+  max-width: 370px;
+  opacity: 0.1;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%,-50%);
+}
+.social-links{
+  text-align: center;
+}
+.social-links .fa{
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  border: 1px solid #dc7053e0;
+  margin: 40px 5px 0;
+  color: #dc7053e0;
+  cursor: pointer;
+  transition: .5s;
+}
+.social-links .fa:hover{
+  background: #dc7053e0;
+  color: #fff;
+  transform: translateY(-7px);
+}
+.social-links p{
+  font-size: 12px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 770px){
+  .footer-left,.footer-right{
+    flex-basis: 100%;
+    font-size: 14px;
+  }
+  .footer-img{
+    top: 25%;
+  }
+} 
+    </style>
+     
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html"><li>About Us</li></a></li>
+              <li><a href="testimonial.html"><li>Testimonials</li></a></li>
+              <li><a href="contact.html"><li>Contact Us</li></a></li>
+            </ul>
+        </nav>
+    </div>
     <section id="banner">
       <img src="images/Catering company logo.jpg" class="logo" />
       <div class="banner-text">
@@ -37,140 +264,34 @@
       <img src="images/icons8-menu-67 (1).png" id="menu" />
     </div>
 
-    <!--features-->
-    <section id="feature">
-      <div class="title-text">
-        <p> FEATURES </p>
-        <h1> Why Food Palace?</h1>
-      </div>
-      <div class="feature-box">
-        <div class="features">
-          <h1> Skilled Personnel</h1>
-          <div class="features-desc">
-            <div class="feature-icon">
-              <i class="fa fa-circle-o"></i>
-              </div>
-            <div class="feature-text">
-               <p> Our service providers are dedicated to providing exceptional service and delicious food;from our experienced chefs to our professional servers and bartenders; making your event a success.</p>
-          </div>
-          </div>
-          <h1> Prebooking Online</h1>
-          <div class="features-desc">
-            <div class="feature-icon">
-              <i class="fa fa-check-square-o"></i>
-              </div>
-            <div class="feature-text">
-               <p> Book your catering services online and save time. It's quick, easy, and convenient.</p>
-          </div>
-          </div>
-          <h1> Affordable Cost</h1>
-          <div class="features-desc">
-            <div class="feature-icon">
-              <i class="fa fa-shield"></i>
-              </div>
-            <div class="feature-text">
-               <p> We do our best to be the best for what you want us to do for you and ensure you have a great smile for the rest of the day.</p>
-          </div>
-          </div>
-        </div>
-        <div class="features-img">
-          <img src="images/pexels-anna-tarazevich-6937442.jpg">
-      </div>
-      </div>
-    </section>
+    <script>
+      var menuBtn = document.getElementById("menuBtn");
+      var sideNav = document.getElementById("sideNav");
+      var menu = document.getElementById("menu");
 
-    <!--Service-->
+      sideNav.style.right = "-100vw";
 
-    <section id="service">
-      <div class="title-text">
-        <p> SERVICES</p>
-        <h1> We Provide The Best</h1>
-      </div>
-      <div class="service-box">
-        <div class="single-service">
-          <img src="images/pexels-vidal-balielo-jr-4007057.jpg">
-          <div class="overlay"></div>
-          <div class="service-desc">
-            <h3> Corporate Catering </h3>
-            <hr>
-            <p> Catering services specifically tailored for corporate clients and events, such as business meetings, conferences, and product launches.</p>
-          </div>
-        </div>
-        <div class="single-service">
-          <img src="images/pexels-marianna-3843224.jpg">
-          <div class="overlay"></div>
-          <div class="service-desc">
-            <h3> Social Event Catering <h3>
-            <hr>
-            <p> Catering services for social gatherings and events, such as weddings, birthday parties, and family reunions.</p>
-          </div>
-        </div>
-        <div class="single-service">
-          <img src="images/pexels-amina-filkins-5561448.jpg">
-          <div class="overlay"></div>
-          <div class="service-desc">
-            <h3> Cooking lessons </h3>
-            <hr>
-            <p> this is test under description of catering services and will put an official desription soon</p>
-          </div>
-        </div>
-        <div class="single-service">
-          <img src="images/pexels-rajesh-tp-1624487 - Copy.jpg">
-          <div class="overlay"></div>
-          <div class="service-desc">
-            <h3> Cooking lessons </h3>
-            <hr>
-            <p> this is test under description of catering services and will put an official desription soon</p>
-          </div>
-        </div>
-      </div>
-        
-          
+      function toggleNav() {
+        console.log("hello");
+        if (sideNav.style.right == "-100vw") {
+          sideNav.style.right = "0";
+          menu.src ="images/icons8-close-50.png";
+        } else {
+          sideNav.style.right = "-100vw";
+          menu.src ="images/icons8-menu-67 (1).png";
+        }
+      }
 
-    </section>
+      menuBtn.addEventListener("click", toggleNav);
+      
+      var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 1000,
+	speedAsDuration: true
+});
 
-    <!-- Testimonial -->
+    </script>
 
-    <section id="testimonial">
-      <div class="title-text">
-        <p> TESTIMONIAL</p>
-        <h1> What Our Customers Say</h1>
-      </div>
-      <div class="testimonial-row">
-        <div class="testimonial-col">
-          <div class="user">
-            <img src="images/customer 3.jpg">
-            <div class="user-info">
-              <h4>FELIX OTIS <i class="fa fa-twitter"></i></h4>
-              <small>@otisfelo</small>
-            </div>
-          </div>
-          <p> "I've used Food Palace catering service for several corporate events and they have exceeded my expectations. The team is always professional, courteous, and they go out of their way to make sure everything is perfect.The food is always a hit - they offer a wide range of options that appeal to all tastes. I highly recommend Food Palace catering service to anyone in need of a top-notch caterer."</p>
-        </div>
-        <div class="testimonial-col">
-          <div class="user">
-            <img src="images/customer 2.jpg">
-            <div class="user-info">
-              <h4>LISA ANISA <i class="fa fa-twitter"></i></h4>
-              <small>@lisanisa</small>
-            </div>
-          </div>
-          <p> "Top-notch catering - we'll definitely be using Food Palace catering service again. Couldn't be happier with the level of service we received. 10/10."</p>
-        </div>
-        <div class="testimonial-col">
-          <div class="user">
-            <img src="images/pexels-mwabonje-1820559.jpg">
-            <div class="user-info">
-              <h4> SHIRLEY AUDREY <i class="fa fa-instagram"></i></h4>
-              <small>@shirdrey</small>
-            </div>
-          </div>
-          <p>"I hosted a dinner party and used Food Palace catering service for the first time. I have to say, I was blown away by how easy they made everything. From helping me choose the right dishes to delivering everything on time. I would definitely use Food Palace catering service again in the future." </p>
-        </div>               
-      </div>
-
-    </section>
-<!--footer--> 
+     <!--footer--> 
 
 <section id="footer"> 
   <img src="images/Chef Cook Hat Fork Spoon2.jpg" class="footer-img">
@@ -206,52 +327,6 @@
 
 </section>
 
-    <script>
-      var menuBtn = document.getElementById("menuBtn");
-      var sideNav = document.getElementById("sideNav");
-      var menu = document.getElementById("menu");
-
-      sideNav.style.right = "-100vw";
-
-      function toggleNav() {
-        console.log("hello");
-        if (sideNav.style.right == "-100vw") {
-          sideNav.style.right = "0";
-          menu.src ="images/icons8-close-50.png";
-        } else {
-          sideNav.style.right = "-100vw";
-          menu.src ="images/icons8-menu-67 (1).png";
-        }
-      }
-
-      menuBtn.addEventListener("click", toggleNav);
-      
-      var scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 1000,
-	speedAsDuration: true
-});
-
-    </script>
-  </body>
+    
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
